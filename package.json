@@ -71,13 +71,14 @@
     "uuid": "^8.3.0",
     "walk-sync": "^1.1.4",
     "webpack": "^4.44.0",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
-    "ajv": "^6.11.0",
-    "async": "^3.2.0",
+    "ajv": "^6.12.3",
+    "async": "^3.2.2",
     "await-sleep": "0.0.1",
-    "aws-sdk": "^2.610.0",
+    "aws-sdk": "^2.814.0",
     "babel-eslint": "^10.1.0",
     "broken-link-checker": "^0.7.8",
     "chalk": "^4.0.0",
@@ -93,7 +94,7 @@
     "event-to-promise": "^0.8.0",
     "graphql": "^14.5.8",
     "heroku-client": "^3.1.0",
-    "husky": "^4.2.1",
+    "husky": "^4.3.7",
     "image-size": "^0.7.4",
     "japanese-characters": "^1.1.0",
     "jest": "^26.0.1",
@@ -109,13 +110,13 @@
     "nodemon": "^2.0.4",
     "npm-merge-driver-install": "^1.1.1",
     "object-hash": "^2.0.1",
-    "pa11y-ci": "^2.3.0",
+    "pa11y-ci": "^3.0.0",
     "puppeteer": "^2.1.1",
     "replace": "^1.2.0",
     "revalidator": "^0.3.1",
     "robots-parser": "^2.1.1",
-    "standard": "^14.3.1",
-    "start-server-and-test": "^1.11.3",
+    "standard": "^14.3.2",
+    "start-server-and-test": "^1.11.7",
     "supertest": "^4.0.2",
     "webpack-dev-middleware": "^3.7.2",
     "website-scraper": "^4.2.0"
@@ -139,7 +140,9 @@
     "check-deps": "node script/check-deps.js",
     "prevent-pushes-to-main": "node script/prevent-pushes-to-main.js",
     "pa11y-ci": "pa11y-ci",
-    "pa11y-test": "start-server-and-test browser-test-server 4001 pa11y-ci"
+    "pa11y-test": "start-server-and-test browser-test-server 4001 pa11y-ci",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "engines": {
     "node": "12 - 14"
@@ -157,5 +160,6 @@
       "pre-commit": "node script/prevent-translation-commits.js",
       "pre-push": "npm run prevent-pushes-to-main"
     }
-  }
+  },
+  "snyk": true
 }
