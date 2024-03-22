@@ -70,7 +70,7 @@
     "style-loader": "^1.2.1",
     "uuid": "^8.3.0",
     "walk-sync": "^1.1.4",
-    "webpack": "^4.44.0",
+    "webpack": "^5.0.0",
     "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
@@ -117,7 +117,7 @@
     "standard": "^14.3.1",
     "start-server-and-test": "^1.11.3",
     "supertest": "^4.0.2",
-    "webpack-dev-middleware": "^3.7.2",
+    "webpack-dev-middleware": "^5.3.4",
     "website-scraper": "^4.2.0"
   },
   "scripts": {
